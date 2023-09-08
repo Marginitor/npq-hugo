@@ -8,9 +8,9 @@
        github repository : <a href="{{.}}">{{.}}</a>
     {{end}}  
 
-    <div class = "toc-wrapper">
-        {{ partial "toc.html" . }}
-    </div>
+    {{ if .Site.Params.toc | default true }}
+    {{ partial "toc" . }}
+    {{ end }}
 
     <!-- {{.TableOfContents}} -->
     {{.Content}}
