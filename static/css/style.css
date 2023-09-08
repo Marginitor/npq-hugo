@@ -39,7 +39,7 @@ aside {
     width: 200px;
     z-index: 1;
     top: 0;
-    left: 0;
+    /*left: 0;*/
     overflow-y: auto;
     position: fixed;
     display: flex;
@@ -415,3 +415,45 @@ footer{
     }
 
 }
+
+/*
+toc
+*/
+@media only screen and (max-width: 1224px) {
+    .post-toc {
+        display: none;
+    }
+} 
+
+.post-toc{
+    position: fixed;
+    right:200px;
+    max-width:300px;
+    overflow:auto;
+    top: 100px;
+    bottom:50px;
+}
+
+.post-toc ul {
+    list-style: none;
+}
+
+.post-toc ul li {
+    list-style: none;
+}
+
+.toc-wrapper {
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      height: 40px;
+      background-color: #eee;
+      border-radius: 16px;
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+}
+ 

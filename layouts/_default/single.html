@@ -7,7 +7,12 @@
     {{ with .Params.githubrepo}}
        github repository : <a href="{{.}}">{{.}}</a>
     {{end}}  
-    {{.TableOfContents}}
+
+    <div class = "toc-wrapper">
+        {{ partial "toc.html" . }}
+    </div>
+
+    <!-- {{.TableOfContents}} -->
     {{.Content}}
     {{if ne .Section ""}}
     <div class="nav-next-prev">
