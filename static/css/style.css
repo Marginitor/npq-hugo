@@ -219,6 +219,16 @@ h1, h2, h3 {
 }
 
 /* code  */
+code {
+    background-color: #2C2C2C;
+    color: #9da2a7;
+    font-size: 90%;
+    font-weight: bold;
+    padding: 2pt 5pt;
+    border-radius: 5pt;
+    margin: 0 5pt;
+}
+
 pre {
     overflow: auto;
     background-color: #2C2F30;
@@ -427,18 +437,22 @@ footer{
     position: fixed;
     top: 30%;
     right: 0;
-    width: 12%;
+    width: 13%;
     transform: translateY(-50%);
     background-color: #353434;
     border: solid 1px #5c5858;
     border-radius: 5px;
     padding-bottom: 1rem;
+
+    font-size: 10pt;
 }
 
 .toc .page-header {
-    padding-left: 10%;
+    padding-left: 40%;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
+    font-size: 12pt;
 }
 
 .toc-nav ul {
@@ -446,12 +460,16 @@ footer{
     overflow:hidden;
     white-space:nowrap;
     line-height: 1rem;
+    padding-left: 1rem;
+    margin: 0;
+    font-weight: bold;
 }
 
 /* ignore h1 header */
 .toc-nav ul ul ul {
     list-style: none;
-    margin-left: 2rem;
+    margin: 0;
+    font-weight: normal;
 }
 
 .toc-nav .nav-link {
