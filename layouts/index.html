@@ -34,22 +34,22 @@
         <div class="posts">
             {{ range where (where site.RegularPages "Type" "in" site.Params.microBlogSection) "Params.pinned" true }}
                 <div class="post">
-                    <div class="meta pinned"> <i class="fas fa-thumbtack"></i> pinned </div>
+                    <div class="meta pinned"> <i class="fas fa-thumbtack"></i> 已顶置 </div>
                     <div class="post-content">
                         {{.Content}}
                     </div>
-                    <div class="meta post-footer"> <span>{{.Date.Format "2006年 1月 2日 03:04:05"}}</span> <a href="{{.Permalink}}"><i class="fas fa-link"></i> link</a></div> 
+                    <div class="meta post-footer"> <span>{{.Date.Format "2006年 1月 2日 03:04:05"}}</span> <a href="{{.Permalink}}"><i class="fas fa-link"></i> 详情 </a></div> 
                 </div>
             {{ end }} 
             {{ range where (where site.RegularPages "Type" "in" site.Params.microBlogSection) "Params.pinned" "ne" true}}
                 <div class="post">
                     {{if ne .Params.pinned nil}}
-                        <div class="meta pinned"> <i class="fas fa-thumbtack"></i> pinned </div>
+                        <div class="meta pinned"> <i class="fas fa-thumbtack"></i> 已顶置 </div>
                     {{end}}
                     <div class="post-content">
                         {{.Content}}
                     </div>
-                    <div class="meta post-footer"> <span>{{.Date.Format "2006年 1月 2日 03:04:05"}}</span> <a href="{{.Permalink}}"><i class="fas fa-link"></i> link</a></div> 
+                    <div class="meta post-footer"> <span>{{.Date.Format "2006年 1月 2日 03:04:05"}}</span> <a href="{{.Permalink}}"><i class="fas fa-link"></i> 详情 </a></div> 
                 </div>
             {{ end }} 
         </div>
