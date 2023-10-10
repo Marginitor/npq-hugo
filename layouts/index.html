@@ -30,7 +30,7 @@
 
     {{if .Site.Params.displayMicroBlog}}
     <div class="section"> 
-        <div class="section-title">μblog</div> 
+        <div class="section-title">通知</div> 
         <div class="posts">
             {{ range where (where site.RegularPages "Type" "in" site.Params.microBlogSection) "Params.pinned" true }}
                 <div class="post">
