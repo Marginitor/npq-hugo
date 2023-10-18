@@ -14,6 +14,9 @@
 
     <!-- {{.TableOfContents}} -->
     {{.Content}}
+
+    {{ partial "share" . }}
+
     {{if ne .Section ""}}
     <div class="nav-next-prev">
         <div class="nav-prev">
