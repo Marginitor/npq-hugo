@@ -11,12 +11,25 @@
     {{end}}  
 
 
+    <!-- toc begin -->
     {{ if .Site.Params.toc | default true }}
     {{ partial "toc" . }}
     {{ end }}
     <!-- {{.TableOfContents}} -->
+    <!-- toc end -->
     
     {{.Content}}
+    
+    <!-- mermaid begin -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true,
+            securityLevel: 'loose',
+            theme: 'dark',
+        });
+    </script>
+    <!-- mermaid end -->
 
     {{ partial "share" . }}
 

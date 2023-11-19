@@ -484,3 +484,10 @@ footer{
     color: var(--accent);
     border-left: solid 2px var(--accent);
 }
+
+/* mermaid style */
+
+.mermaid svg {
+    display: block;
+    margin: auto;
+}
